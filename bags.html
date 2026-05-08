@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shruthi Book Shop - Bags</title>
+    <link rel="stylesheet" href="basic.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a class="logo" href="basic.html"><span>S</span>Shruthi Book Shop</a>
+            <div class="nav-links">
+                <a href="basic.html">Home</a>
+                <a href="books.html">Books</a>
+                <a href="pens.html">Pens</a>
+                <a href="pencils.html">Pencils</a>
+                <a href="bags.html">Bags</a>
+                <a href="toys.html">Toys</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="products-page">
+        <div class="page-heading">
+            <div>
+                <p class="small-title">Bags section</p>
+                <h1>Bags</h1>
+                <p>Shop school, college, casual, lunch, and laptop bags.</p>
+            </div>
+            <a class="secondary-button" href="basic.html#sections">Back to sections</a>
+        </div>
+
+        <div class="shop-layout">
+            <div id="productGrid" class="product-grid"></div>
+            <aside class="cart">
+                <div class="cart-title">
+                    <h2>Your Cart</h2>
+                    <span id="cartCount">0</span>
+                </div>
+                <div id="cartItems" class="cart-items"></div>
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong id="cartTotal">Rs. 0</strong>
+                </div>
+                <button id="checkoutButton" class="primary-button full-button" type="button">Checkout</button>
+                <div id="scannerBox" class="scanner-box" hidden>
+                    <p>Scan and pay</p>
+                    <div class="qr-code" aria-label="Payment scanner code">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+                    <strong id="scannerAmount">Total: Rs. 0</strong>
+                </div>
+                <p id="message" class="message" role="status"></p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer"><p>Shruthi Book Shop - Bags section.</p></footer>
+
+    <script>
+        window.sectionProducts = [
+    { id: 401, name: 'School Bag', category: 'bags', price: 650, stock: 6, detail: 'Strong bag for books and lunch box.', letter: 'S' },
+    { id: 402, name: 'College Bag', category: 'bags', price: 850, stock: 4, detail: 'Stylish bag for notebooks and laptop.', letter: 'C' },
+    { id: 403, name: 'Casual Bag', category: 'bags', price: 520, stock: 8, detail: 'Light bag for daily use.', letter: 'B' },
+    { id: 404, name: 'Lunch Bag', category: 'bags', price: 220, stock: 0, detail: 'Compact bag for lunch boxes.', letter: 'L' },
+    { id: 405, name: 'Laptop Bag', category: 'bags', price: 980, stock: 3, detail: 'Protective bag for laptop and books.', letter: 'P' }
+];
+    </script>
+    <script src="category.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shruthi Book Shop - Pens</title>
+    <link rel="stylesheet" href="basic.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a class="logo" href="basic.html"><span>S</span>Shruthi Book Shop</a>
+            <div class="nav-links">
+                <a href="basic.html">Home</a>
+                <a href="books.html">Books</a>
+                <a href="pens.html">Pens</a>
+                <a href="pencils.html">Pencils</a>
+                <a href="bags.html">Bags</a>
+                <a href="toys.html">Toys</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="products-page">
+        <div class="page-heading">
+            <div>
+                <p class="small-title">Pens section</p>
+                <h1>Pens</h1>
+                <p>Choose pens and add available items to cart.</p>
+            </div>
+            <a class="secondary-button" href="basic.html#sections">Back to sections</a>
+        </div>
+
+        <div class="shop-layout">
+            <div id="productGrid" class="product-grid"></div>
+            <aside class="cart">
+                <div class="cart-title">
+                    <h2>Your Cart</h2>
+                    <span id="cartCount">0</span>
+                </div>
+                <div id="cartItems" class="cart-items"></div>
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong id="cartTotal">Rs. 0</strong>
+                </div>
+                <button id="checkoutButton" class="primary-button full-button" type="button">Checkout</button>
+                <div id="scannerBox" class="scanner-box" hidden>
+                    <p>Scan and pay</p>
+                    <div class="qr-code" aria-label="Payment scanner code">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+                    <strong id="scannerAmount">Total: Rs. 0</strong>
+                </div>
+                <p id="message" class="message" role="status"></p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer"><p>Shruthi Book Shop - Pens section.</p></footer>
+
+    <script>
+        window.sectionProducts = [
+    { id: 201, name: 'Blue Ball Pen', category: 'pens', price: 15, stock: 20, detail: 'Smooth pen for everyday writing.', letter: 'B' },
+    { id: 202, name: 'Gel Pen Set', category: 'pens', price: 75, stock: 9, detail: 'Colorful gel pens for notes and projects.', letter: 'G' },
+    { id: 203, name: 'Marker Pen', category: 'pens', price: 45, stock: 0, detail: 'Bold marker for charts and boards.', letter: 'M' },
+    { id: 204, name: 'Sketch Pen Pack', category: 'pens', price: 110, stock: 6, detail: 'Bright sketch pens for drawing.', letter: 'S' },
+    { id: 205, name: 'Ink Pen', category: 'pens', price: 90, stock: 4, detail: 'Classic pen for neat handwriting.', letter: 'I' }
+];
+    </script>
+    <script src="category.js"></script>
+</body>
+</html>

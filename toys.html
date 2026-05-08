@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shruthi Book Shop - Toys</title>
+    <link rel="stylesheet" href="basic.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a class="logo" href="basic.html"><span>S</span>Shruthi Book Shop</a>
+            <div class="nav-links">
+                <a href="basic.html">Home</a>
+                <a href="books.html">Books</a>
+                <a href="pens.html">Pens</a>
+                <a href="pencils.html">Pencils</a>
+                <a href="bags.html">Bags</a>
+                <a href="toys.html">Toys</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="products-page">
+        <div class="page-heading">
+            <div>
+                <p class="small-title">Toys section</p>
+                <h1>Toys</h1>
+                <p>Fun and learning toys for children.</p>
+            </div>
+            <a class="secondary-button" href="basic.html#sections">Back to sections</a>
+        </div>
+
+        <div class="shop-layout">
+            <div id="productGrid" class="product-grid"></div>
+            <aside class="cart">
+                <div class="cart-title">
+                    <h2>Your Cart</h2>
+                    <span id="cartCount">0</span>
+                </div>
+                <div id="cartItems" class="cart-items"></div>
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong id="cartTotal">Rs. 0</strong>
+                </div>
+                <button id="checkoutButton" class="primary-button full-button" type="button">Checkout</button>
+                <div id="scannerBox" class="scanner-box" hidden>
+                    <p>Scan and pay</p>
+                    <div class="qr-code" aria-label="Payment scanner code">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+                    <strong id="scannerAmount">Total: Rs. 0</strong>
+                </div>
+                <p id="message" class="message" role="status"></p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer"><p>Shruthi Book Shop - Toys section.</p></footer>
+
+    <script>
+        window.sectionProducts = [
+    { id: 501, name: 'Puzzle Toy', category: 'toys', price: 160, stock: 7, detail: 'Fun puzzle toy for learning and play.', letter: 'P' },
+    { id: 502, name: 'Building Blocks', category: 'toys', price: 240, stock: 5, detail: 'Creative blocks for children.', letter: 'B' },
+    { id: 503, name: 'Toy Car', category: 'toys', price: 180, stock: 0, detail: 'Small toy car for play time.', letter: 'C' },
+    { id: 504, name: 'Soft Toy', category: 'toys', price: 320, stock: 6, detail: 'Soft and cute gift toy.', letter: 'S' },
+    { id: 505, name: 'Learning Cards', category: 'toys', price: 120, stock: 10, detail: 'Cards for alphabets and numbers.', letter: 'L' }
+];
+    </script>
+    <script src="category.js"></script>
+</body>
+</html>
