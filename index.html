@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shruthi Book Shop</title>
+    <link rel="stylesheet" href="basic.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a class="logo" href="index.html"><span>S</span>Shruthi Book Shop</a>
+            <div class="nav-links">
+                <a href="#sections">Sections</a>
+                <a href="#contact">Request Product</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <p class="small-title">Books, stationery, bags, and toys</p>
+                <h1>Shruthi Book Shop</h1>
+                <p>A friendly shop where you can find evrything that you like:)</p>
+                <div class="hero-actions">
+                    <a class="primary-button" href="#sections">Shop sections</a>
+                    <a class="secondary-button" href="#contact">Ask for product</a>
+                </div>
+            </div>
+
+            <div class="hero-art simple-hero-art" aria-label="Shruthi shop display">
+                <div class="simple-shop-card">
+                    <span class="simple-logo">S</span>
+                    <h2>Make order with smile</h2>
+                    <p>Books • Pens • Pencils • Bags • Toys</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sections" class="sections">
+            <p class="small-title">Shop by section</p>
+            <h2>Choose What You Need</h2>
+            <div class="section-links">
+                <a id="books" class="section-link books-bg" href="books.html"><span>Books</span><small>Guides, notebooks, stories</small></a>
+                <a id="pens" class="section-link pens-bg" href="pens.html"><span>Pens</span><small>Ball, gel, marker, ink</small></a>
+                <a id="pencils" class="section-link pencils-bg" href="pencils.html"><span>Pencils</span><small>HB, color, drawing sets</small></a>
+                <a id="bags" class="section-link bags-bg" href="bags.html"><span>Bags</span><small>School, college, casual</small></a>
+                <a id="toys" class="section-link toys-bg" href="toys.html"><span>Toys</span><small>Puzzles, blocks, games</small></a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div>
+                <p class="small-title">Request product</p>
+                <h2>Need something not listed?</h2>
+                <p>Enter the product you want. After submitting, the website will show: I will send you soon.</p>
+            </div>
+            <form id="requestForm" class="contact-form">
+                <input id="customerName" type="text" placeholder="Your name" required>
+                <input id="wantedProduct" type="text" placeholder="Product you want" required>
+                <textarea id="requestDetails" rows="4" placeholder="More details"></textarea>
+                <button class="primary-button" type="submit">Send request</button>
+                <p id="requestMessage" class="message" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>email:ragashruthi@gmail.com</p>
+    </footer>
+
+    <script>
+        document.getElementById('requestForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById('customerName').value.trim();
+            const product = document.getElementById('wantedProduct').value.trim();
+            const details = document.getElementById('requestDetails').value.trim();
+            const subject = encodeURIComponent('Product request from Shruthi Book Shop');
+            const body = encodeURIComponent(
+                `Customer name: ${name}\nProduct wanted: ${product}\nDetails: ${details || 'No extra details'}`
+            );
+
+            window.location.href = `mailto:ragashruthi@gmail.com?subject=${subject}&body=${body}`;
+            this.reset();
+            document.getElementById('requestMessage').textContent = 'I will send you soon.';
+        });
+    </script>
+</body>
+</html>
+
+
+
+
